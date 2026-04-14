@@ -1,0 +1,96 @@
+{
+  "version": "2.0.0",
+  "description": "AI Drama Automation Configuration",
+
+  "consistency_mode": "strict",
+
+  "global_constraints": {
+    "character_consistency": true,
+    "scene_consistency": true,
+    "style_consistency": true,
+    "narrative_consistency": true,
+    "forbidden_actions": [
+      "free_creation",
+      "style_drift",
+      "undefined_elements",
+      "emotion_shift"
+    ]
+  },
+
+  "llmConfig": {
+    "model": "YOUR_LLM_MODEL",
+    "maxTokens": 4096,
+    "temperature": 0.7,
+    "apiKey": "YOUR_API_KEY",
+    "baseUrl": "YOUR_API_BASE_URL",
+    "purpose": "剧本生成、角色提取、场景分析、分镜生成"
+  },
+
+  "imageConfig": {
+    "model": "YOUR_IMAGE_MODEL",
+    "style": "cinematic",
+    "apiKey": "YOUR_API_KEY",
+    "apiUrl": "YOUR_API_URL",
+    "resolution": "1080P",
+    "aspectRatio": "9:16",
+    "purpose": "关键帧图像生成"
+  },
+
+  "videoConfig": {
+    "model": "YOUR_VIDEO_MODEL",
+    "duration": 5,
+    "apiKey": "YOUR_API_KEY",
+    "apiUrl": "YOUR_API_URL",
+    "resolution": "1080P",
+    "frameRate": 24,
+    "coherence_strength": "maximum",
+    "style_similarity": "highest_priority",
+    "randomness": "low",
+    "fidelity_priority": "character_scene_consistency",
+    "purpose": "分镜视频片段生成"
+  },
+
+  "anchorTemplate": {
+    "core_topic": "",
+    "emotion": "",
+    "video_duration": "60s",
+    "main_character": {
+      "identity": "",
+      "appearance": "",
+      "clothing": "",
+      "habitual_action": ""
+    },
+    "main_scene": {
+      "location": "",
+      "environment": "",
+      "lighting": "",
+      "color_tone": ""
+    },
+    "voice_anchor": {
+      "voice_type": "年轻男声/年轻女声/中年男声/中年女声/童声",
+      "voice_style": "活泼/稳重/温柔/激昂/幽默",
+      "voice_speed": "正常/稍快/稍慢",
+      "voice_pitch": "中音/高音/低音",
+      "voice_emotion": "积极励志/温暖治愈/严肃认真/轻松幽默"
+    },
+    "visual_style": "",
+    "camera_style": "",
+    "color_theme": ""
+  },
+
+  "generation_flow": [
+    "extract_anchor",
+    "generate_script",
+    "generate_storyboard",
+    "generate_keyframes",
+    "generate_videos",
+    "merge_output"
+  ],
+
+  "quality_settings": {
+    "resolution": "1080P",
+    "frameRate": 24,
+    "bitrate": "auto",
+    "audioSampleRate": 44100
+  }
+}
